@@ -1,0 +1,80 @@
+.header {
+  padding-top: 35px;
+  padding-bottom: 35px;
+  margin-bottom: 40px;
+  border-bottom: 1px solid #E2E2E2;
+
+  &-content {
+    &.flex {
+      align-items: center;
+    }
+  }
+
+
+  &-logo {
+    margin-right: 69px;
+    line-height: 0;
+  }
+
+  &-location {
+    position: relative;
+    padding-left: 27px;
+    margin-right: 82px;
+
+    a {
+      color: #EE8F00;
+    }
+
+    &::before {
+      content: '';
+      background-image: url('../images/icon/location.svg');
+      background-repeat: no-repeat;
+      background-size: 18px;
+      width: 18px;
+      height: 21px;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+  }
+
+  &-calculation {
+    margin-right: 76px;
+
+    img {
+      position: relative;
+      top: 3px;
+    }
+
+    .ui-btn {
+      padding: 0 29px;
+    }
+  }
+
+  &-nav {
+    display: inline-block;
+    margin-right: 89px;
+
+    ul {
+      display: inline-block;
+      margin: 0;
+      vertical-align: middle;
+      line-height: 56px;
+    }
+
+    li {
+      display: inline-block;
+      margin-right: 48px;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+
+  &-auth {
+    .ui-btn {
+      padding: 0 21px;
+    }
+  }
+}
