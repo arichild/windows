@@ -1,0 +1,129 @@
+.news {
+  margin-bottom: 45px;
+
+  &-large {
+    position: relative;
+    max-width: 445px;
+
+    &-txt {
+      position: absolute;
+      bottom: 30px;
+      left: 30px;
+    }
+
+    &-img {
+      line-height: 0;
+      position: relative;
+
+      &::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        display: inline-block;
+        background: linear-gradient(180.06deg, rgba(0, 0, 0, 0) -1.01%, rgba(29, 29, 29, 0.8) 99.95%), url(13.jpg);
+      }
+    }
+
+    &-date {
+      color: #fff;
+      margin-bottom: 8px;
+
+      span {
+        color: #EE8F00;
+
+        &::after {
+          content: '';
+          width: 20px;
+          height: 1px;
+          background: #fff;
+          margin: 0 8px;
+          display: inline-block;
+          position: relative;
+          top: -4px;
+        }
+      }
+    }
+
+    &-title {
+      font-weight: 600;
+      font-size: 28px;
+      color: #fff;
+      margin-bottom: 22px;
+      line-height: 36px;
+      display: inline-block;
+    }
+  }
+
+  &-card {
+    max-width: 445px;
+    margin-bottom: 75px;
+
+    &-img {
+      line-height: 0;
+      margin-bottom: 25px;
+
+      &::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        display: inline-block;
+        background: linear-gradient(180deg, rgba(0, 0, 0, 0) 56.76%, rgba(29, 29, 29, 0.2) 100%)
+      }
+    }
+
+    &-date {
+      color: #1D1D1D;
+      margin-bottom: 8px;
+
+      span {
+        color: #EE8F00;
+
+        &::after {
+          content: '';
+          width: 20px;
+          height: 1px;
+          background: #1D1D1D;
+          margin: 0 8px;
+          display: inline-block;
+          position: relative;
+          top: -4px;
+        }
+      }
+    }
+
+    &-title {
+      font-weight: 600;
+      font-size: 28px;
+      color: #1D1D1D;
+      margin-bottom: 22px;
+      line-height: 36px;
+      display: inline-block;
+    }
+
+    &-img {
+      overflow: hidden;
+      position: relative;
+      display: block;
+      height: 0;
+      padding-bottom: 67.6%;
+
+      img {
+        object-fit: contain;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%,-50%);
+      }
+    }
+
+    &-tag {
+      font-size: 0;
+    }
+  }
+}

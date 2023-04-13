@@ -2,10 +2,6 @@
   background: #1D1D1D;
   color: #fff;
 
-  a {
-    color: #fff;
-  }
-
   &-content {
     &-top {
       padding-top: 52px;
@@ -75,16 +71,22 @@
   &-nav {
     display: inline-block;
     margin-right: 115px;
+    font-size: 0;
 
     a {
       font-size: 18px;
+      color: #fff;
+
+      &:hover {
+        color: #EE8F00;
+      }
     }
 
     ul {
       display: inline-block;
       margin: 0;
       vertical-align: middle;
-      line-height: 56px;
+      line-height: 50px;
     }
 
     li {
@@ -97,6 +99,24 @@
     }
   }
 
+  &-links {
+    font-size: 0;
+
+    a {
+      font-size: 16px;
+      color: #D6D6D6;
+
+      &:hover {
+        color: #EE8F00;
+      }
+    }
+  }
+
+  &-social {
+    font-size: 0;
+    flex: 0 0 145px;
+  }
+
   &-social-link {
     background: #343434;
     border-radius: 32px;
@@ -106,6 +126,10 @@
     display: inline-block;
     text-align: center;
     position: relative;
+
+    &:hover {
+      background: #565353;
+    }
 
 
     &:last-child {

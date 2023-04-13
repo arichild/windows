@@ -74,6 +74,8 @@ img {
 }
 
 a {
+  transition: .1s ease-out;
+
   &:hover {
     color: #90A1BA;
   }

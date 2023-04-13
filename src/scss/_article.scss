@@ -1,0 +1,150 @@
+.article {
+  max-width: 1144px;
+  margin: 0 auto;
+
+  &-text {
+    font-size: 18px;
+    margin-bottom: 107px;
+    // max-width: 678px;
+    margin-left: 7px;
+  }
+
+  &-head {
+    margin-bottom: 60px;
+
+    .ui-tag {
+      font-size: 16px;
+    }
+  }
+
+  &-date {
+    color: #1D1D1D;
+    margin-right: 35px;
+
+    span {
+      color: #EE8F00;
+
+      &::after {
+        content: '';
+        width: 20px;
+        height: 1px;
+        background: #1D1D1D;
+        margin: 0 8px;
+        display: inline-block;
+        position: relative;
+        top: -4px;
+      }
+    }
+  }
+
+  &-img {
+    margin-bottom: 52px;
+  }
+
+  &-more {
+    align-items: center;
+    margin-top: 80px;
+    margin-bottom: 80px;
+    padding: 20px 0;
+    border-top: 1px solid #E2E2E2;
+    border-bottom: 1px solid #E2E2E2;
+
+    &-img {
+      line-height: 0;
+      margin-right: 16px;
+    }
+
+    &-txt {
+      max-width: 498px;
+    }
+
+    &-title {
+      font-weight: 400;
+      font-size: 24px;
+      line-height: 1.3;
+    }
+
+    a {
+      font-weight: 600;
+      font-size: 14px;
+      margin-bottom: 6px;
+      color: #EE8F00;
+
+      &:hover {
+        color: #faae3b;
+      }
+    }
+  }
+
+  ul {
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+
+  p {
+    margin-bottom: 25px;
+  }
+
+  h2 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-top: 0;
+    margin-bottom: 25px;
+  }
+
+  a {
+    color: #EE8F00;
+
+    &:hover {
+      color: #faae3b;
+    }
+  }
+
+  li {
+    position: relative;
+    padding-left: 23px;
+    margin-bottom: 25px;
+
+    &::before {
+      content: '';
+      width: 8px;
+      height: 8px;
+      left: 0;
+      top: 10px;
+      background: #EE8F00;
+      position: absolute;
+    }
+  }
+}
+
+.social {
+  max-width: 72px;
+
+  &-link {
+    display: block;
+    width: 72px;
+    height: 72px;
+    border: 1px solid #E2E2E2;
+    border-radius: 50%;
+    position: relative;
+    margin-bottom: 12px;
+
+    &:hover {
+      border-color: #EE8F00;
+
+      svg {
+        fill: #EE8F00;
+      }
+    }
+
+    svg {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      width: 26px;
+      height: 26px;
+      fill: #7B9095;
+    }
+  }
+}
