@@ -11,6 +11,7 @@
   <title>windows</title>
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jQueryFormStyler/2.0.2/jquery.formstyler.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css">
   <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
@@ -23,7 +24,35 @@
           <img src="./images/logo.svg" alt="alt">
         </div>
 
-        <div class="header-location">Ваш город: <a href="#">Москва</a></div>
+        <div class="header-location-block">
+          <div class="header-location">Ваш город: <a href="javascript:void(0)" class="header-location-link underline">Москва</a></div>
+
+          <div class="header-location-setting">
+            <form action="#">
+              <div class="header-location-head">
+                <div class="header-location-title">Ваш город: <span>Санкт-Петербург</span></div>
+              </div>
+
+              <div class="header-location-body">
+                <div class="ui-field">
+                  <input type="text" class="ui-input" placeholder="Введите название города">
+                </div>
+
+                <div class="ui-checkbox">
+                  <input autocomplete="off" type="checkbox" id="location" class="ui-checkbox-input" name="checkbox">
+                  <label for="location" class="ui-checkbox-label">
+                    <span class="default-txt">Определять регион автоматически</span>
+                  </label>
+                </div>
+
+                <button class="ui-btn border-black">
+                  Применить новый регион
+                  <img src="./images/icon/link-orange.svg" alt="alt">
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
 
         <div class="header-calculation">
           <a href="#" class="ui-btn">
@@ -41,7 +70,7 @@
         </div>
 
         <div class="header-auth">
-          <a href="#" class="ui-btn white">Войти</a>
+          <a href="javascript:void(0)" data-href="./popup/sign-in.html" class="mfp-link ui-btn white">Войти</a>
         </div>
       </div>
     </div>

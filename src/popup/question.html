@@ -1,0 +1,134 @@
+<div class="ui-popup question">
+  <div class="ui-popup-head">Задайте вопрос</div>
+
+  <div class="ui-popup-body sign-in">
+    <form action="#" class="popup-form">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="ui-field">
+            <label class="ui-label" for="phone">Имя <span>*</span></label>
+
+            <div class="ui-input-field">
+              <input type="text" name="name" id="name" class="ui-input" placeholder="Ваше имя">
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="ui-field">
+            <label class="ui-label" for="email">Email <span>*</span></label>
+
+            <div class="ui-input-field">
+              <input type="text" name="email" id="email" class="ui-input" placeholder="email@site.ru">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="ui-field">
+        <label class="ui-label">Рубрика</label>
+
+        <div class="ui-input-wrp">
+          <label for="question" class="ui-label"></label>
+
+          <select name="question" id="question" class="ui-select" data-placeholder="Выберите тип вопроса">
+            <option value=""></option>
+            <option value="Вопрос 1">Вопрос 1</option>
+            <option value="Вопрос 2">Вопрос 2</option>
+            <option value="Вопрос 3">Вопрос 3</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="ui-field">
+        <label class="ui-label">Вопрос <span>*</span></label>
+        <textarea id="msg" name="msg" class="ui-input" rows="4" placeholder="Напишите ваш вопрос"></textarea>
+      </div>
+
+      <div class="ui-field field-load">
+        <label for="popup-review-file" class="ui-file load-file">
+          <span class="ui-file-txt underline">Прикрепить файл</span>
+          <input type="file" id="popup-review-file" name="file" class="ui-file-input file" accept=".txt,.doc,.docx,.pdf">
+        </label>
+      </div>
+
+      <div class="ui-popup-checkbox">
+        <div class="ui-checkbox">
+          <input autocomplete="off" type="checkbox" id="customCheckbox" class="ui-checkbox-input" name="checkbox">
+          <label for="customCheckbox" class="ui-checkbox-label">
+            <span class="default-txt">
+              Соглашаюсь с <a href="#">Политикой работы с персональными данными</a>
+            </span>
+          </label>
+        </div>
+      </div>
+
+      <button class="ui-btn">Отправить</button>
+    </form>
+  </div>
+
+  <script>
+    $( document ).ready(function() {
+      showPassword();
+      phoneValidate();
+      $('select.ui-select').styler();
+
+      $( document ).ready(function() {
+        $(".popup-form").validate({
+          errorElement: "span",
+
+          rules: {
+            name: {
+              required: true,
+              lettersonly: true
+            },
+
+            email : {
+              required: true,
+              email: true,
+            },
+
+            msg : {
+              required: true,
+            },
+
+            checkbox: {
+              required: true,
+            },
+          },
+
+          messages: {
+            email : {
+              email: 'Введите корректный email',
+            },
+
+            checkbox: {
+              required: 'Пожалуйста подтвердите условия соглашения'
+            },
+          },
+
+          errorPlacement: function (error, element) {
+            if (element.hasClass('ui-input')) {
+              element.closest('.ui-field').append(error);
+            }
+
+            if (element.hasClass('ui-checkbox-input')) {
+              element.closest('.ui-checkbox').append(error);
+            }
+
+            if (element.hasClass('password')) {
+              element.closest('.ui-input-password').after(error);
+            }
+
+            if (element.hasClass('ui-select')) {
+              element.closest('.jq-selectbox').after(error);
+            }
+          },
+
+          submitHandler: function (form) {
+            showPopup()
+          },
+        });
+      });
+    });
+  </script>
+</div>

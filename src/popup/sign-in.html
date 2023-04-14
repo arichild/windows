@@ -1,0 +1,83 @@
+<div class="ui-popup sign-in">
+  <div class="ui-popup-head">Вход</div>
+
+  <div class="ui-popup-body sign-in">
+    <form action="#" class="popup-form">
+      <div class="ui-field">
+        <label class="ui-label" for="phone">Телефон</label>
+
+        <div class="ui-input-field">
+          <input type="text" name="phone" id="phone" class="ui-input" placeholder="Введите номер телефона">
+        </div>
+      </div>
+
+      <div class="ui-field">
+        <label class="ui-label" for="password">Пароль</label>
+
+        <div class="ui-input-field">
+          <div class="ui-input-password">
+            <input type="password" name="password" id="password" class="ui-input password" placeholder="Введите ваш пароль">
+
+            <svg class="sprite password">
+              <use xlink:href="./images/svg/symbols.svg#pass"></use>
+            </svg>
+          </div>
+        </div>
+
+        <a href="#" class="sign-in-password">Забыли пароль?</a>
+      </div>
+
+      <div class="sign-in-enter flex">
+        <button class="ui-btn">Войти</button>
+
+        <div class="sign-in-link">
+          Нет аккаунта? <a href="javascript:void(0)" data-href="./popup/sign-up.html" class="mfp-link">Регистрация</a>
+        </div>
+      </div>
+
+      <div class="sign-in-desc">
+        Совершая вход в личный кабинет, вы соглашаетесь с <a href="#">Политикой обработки персональных данных</a>
+      </div>
+    </form>
+  </div>
+
+  <script>
+    $( document ).ready(function() {
+      showPassword();
+      phoneValidate();
+
+      $( document ).ready(function() {
+        $(".popup-form").validate({
+          errorElement: "span",
+
+          rules: {
+            phone: {
+              required: true,
+              phone: true,
+            },
+            password: {
+              required: true,
+              min: 8,
+            },
+          },
+
+          messages: {
+            password: {
+              min: 'Минимальная длина пароля 8 символов'
+            }
+          },
+
+          errorPlacement: function (error, element) {
+            if (element.hasClass('ui-input')) {
+              element.closest('.ui-field').append(error);
+            }
+
+            if (element.hasClass('password')) {
+              element.closest('.ui-input-password').after(error);
+            }
+          },
+        });
+      });
+    });
+  </script>
+</div>

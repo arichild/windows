@@ -4,6 +4,7 @@
 @import "./base/grid.scss";
 @import "./base/mixin.scss";
 @import "./base/ui.scss";
+@import "./base/ui-popup.scss";
 
 // fonts
 @import "fonts.scss";
@@ -17,6 +18,13 @@
 @import "reviews";
 @import "article";
 @import "news";
+@import "pages";
+
+// popup
+@import "./popup/sign-in.scss";
+@import "./popup/sign-up.scss";
+@import "./popup/question.scss";
+
 
 * {
   box-sizing: border-box;

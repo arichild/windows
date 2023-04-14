@@ -1,0 +1,100 @@
+.ui-popup {
+  max-width: 612px;
+  width: 100%;
+  margin: 0 auto;
+  background: #fff;
+  position: relative;
+  box-shadow: 0px 4px 35px rgba(114, 142, 174, 0.2);
+
+  &.sign-in {
+    max-width: 478px;
+  }
+
+  &.center {
+    text-align: center;
+
+    .ui-btn {
+      max-width: 197px;
+      width: 100%;
+    }
+  }
+
+  .mfp-close {
+    font-size: 0;
+    position: absolute;
+
+    &::before {
+      content: '';
+      background-image: url('../images/icon/close.svg');
+      background-repeat: no-repeat;
+      background-size: 23px;
+      width: 23px;
+      height: 23px;
+      position: absolute;
+      right: 20px;
+      top: 20px;
+    }
+  }
+
+  &-head {
+    padding: 21px 50px;
+    background: #F4F9FE;
+    font-weight: 600;
+    font-size: 36px;
+    color: #1D1D1D;
+
+    &.fs-28 {
+      font-size: 28px;
+    }
+  }
+
+  &-body {
+    padding: 58px 50px 54px 50px;
+
+    &.center {
+      text-align: center;
+    }
+
+    &.sign-in {
+      padding-right: 72px;
+    }
+
+    .ui-input {
+      max-width: 100%;
+    }
+  }
+
+  &-checkbox {
+    .ui-checkbox-label span {
+      color: #1D1D1D;
+    }
+
+    .ui-checkbox a {
+      color: #EE8F00;
+    }
+
+    .ui-checkbox {
+      margin-bottom: 17px;
+    }
+  }
+
+  &-txt {
+    font-size: 18px;
+    max-width: 365px;
+    margin: 0 auto 32px;
+  }
+
+  &-title {
+    font-weight: 600;
+    margin-bottom: 28px;
+  }
+
+  &-subtitle {
+    font-weight: 400;
+  }
+}
+
+.mfp-bg {
+  background: #fff;
+  opacity: 0.75;
+}

@@ -11,7 +11,7 @@
       <div class="ui-heading flex">
         <div class="ui-heading-txt flex">
           <div class="ui-title">Вопросы и ответы <span>50 записей</span></div>
-          <a href="#" class="ui-btn border-black">
+          <a href="javascript:void(0)" data-href="./popup/question.html" class="mfp-link ui-btn border-black">
             Задать вопрос
             <img src="./images/icon/link-orange.svg" alt="alt">
           </a>
@@ -28,64 +28,197 @@
         <div class="ui-input-search">
           <form action="#">
             <input type="text" placeholder="Поиск по новостям">
+            <button><svg class="sprite ui-pgn-arrow-icon next">
+              <use xlink:href="./images/svg/symbols.svg#search"></use>
+            </svg></button>
           </form>
         </div>
       </div>
 
-      <div class="ui-filter">
+      <div class="ui-filter tab">
         <span>Рубрики:</span>
 
-        <a href="#" class="active">Все вопросы</a>
-        <a href="#">Общие вопросы</a>
-        <a href="#">Технические вопросы</a>
-        <a href="#">Оплата</a>
-        <a href="#">Юридические вопросы</a>
+        <button class="btn-tab active" id="question-all">Все вопросы</button>
+        <button class="btn-tab underline" id="question-general">Общие вопросы</button>
+        <button class="btn-tab underline" id="question-technical">Технические вопросы</button>
+        <button class="btn-tab underline" id="question-payment">Оплата</button>
+        <button class="btn-tab underline" id="question-legal">Юридические вопросы</button>
       </div>
 
       <div class="reviews">
         <div class="row">
           <div class="col-md-8">
-            <div class="reviews-list">
-              <div class="reviews-card">
-                <div class="reviews-card-txt faq">
-                  <div class="reviews-card-title faq">При возникновении гарантийного случая куда мне обращаться? К вам или к компании, которая ставила окно?</div>
+            <div class="tab-content question-all active">
+              <div class="reviews-list">
+                <div class="reviews-card">
+                  <div class="reviews-card-txt faq">
+                    <div class="reviews-card-title faq">При возникновении гарантийного случая куда мне обращаться? К вам или к компании, которая ставила окно?</div>
 
-                  <div class="reviews-card-subtitle">К компании, которая устанавливала окно. При этом сообщите об этом и нам, чтобы остальные участники сервиса знали, можно ли доверять той или иной компании, оценивая её по рейтингу.</div>
+                    <div class="reviews-card-subtitle">К компании, которая устанавливала окно. При этом сообщите об этом и нам, чтобы остальные участники сервиса знали, можно ли доверять той или иной компании, оценивая её по рейтингу.</div>
+                  </div>
+                </div>
+                <div class="reviews-card">
+                  <div class="reviews-card-txt faq">
+                    <div class="reviews-card-title faq">При возникновении гарантийного случая куда мне обращаться? К вам или к компании, которая ставила окно?</div>
+
+                    <div class="reviews-card-subtitle">К компании, которая устанавливала окно. При этом сообщите об этом и нам, чтобы остальные участники сервиса знали, можно ли доверять той или иной компании, оценивая её по рейтингу.</div>
+                  </div>
+                </div>
+                <div class="reviews-card">
+                  <div class="reviews-card-txt faq">
+                    <div class="reviews-card-title faq">При возникновении гарантийного случая куда мне обращаться? К вам или к компании, которая ставила окно?</div>
+
+                    <div class="reviews-card-subtitle">К компании, которая устанавливала окно. При этом сообщите об этом и нам, чтобы остальные участники сервиса знали, можно ли доверять той или иной компании, оценивая её по рейтингу.</div>
+                  </div>
+                </div>
+                <div class="reviews-card">
+                  <div class="reviews-card-txt faq">
+                    <div class="reviews-card-title faq">При возникновении гарантийного случая куда мне обращаться? К вам или к компании, которая ставила окно?</div>
+
+                    <div class="reviews-card-subtitle">К компании, которая устанавливала окно. При этом сообщите об этом и нам, чтобы остальные участники сервиса знали, можно ли доверять той или иной компании, оценивая её по рейтингу.</div>
+                  </div>
+                </div>
+                <div class="reviews-card">
+                  <div class="reviews-card-txt faq">
+                    <div class="reviews-card-title faq">При возникновении гарантийного случая куда мне обращаться? К вам или к компании, которая ставила окно?</div>
+
+                    <div class="reviews-card-subtitle">К компании, которая устанавливала окно. При этом сообщите об этом и нам, чтобы остальные участники сервиса знали, можно ли доверять той или иной компании, оценивая её по рейтингу.</div>
+                  </div>
+                </div>
+                <div class="reviews-card">
+                  <div class="reviews-card-txt faq">
+                    <div class="reviews-card-title faq">При возникновении гарантийного случая куда мне обращаться? К вам или к компании, которая ставила окно?</div>
+
+                    <div class="reviews-card-subtitle">К компании, которая устанавливала окно. При этом сообщите об этом и нам, чтобы остальные участники сервиса знали, можно ли доверять той или иной компании, оценивая её по рейтингу.</div>
+                  </div>
                 </div>
               </div>
-              <div class="reviews-card">
-                <div class="reviews-card-txt faq">
-                  <div class="reviews-card-title faq">При возникновении гарантийного случая куда мне обращаться? К вам или к компании, которая ставила окно?</div>
+            </div>
+            <div class="tab-content question-general">
+              <div class="reviews-list">
+                <div class="reviews-card">
+                  <div class="reviews-card-txt faq">
+                    <div class="reviews-card-title faq">При возникновении гарантийного случая куда мне обращаться? К вам или к компании, которая ставила окно?</div>
 
-                  <div class="reviews-card-subtitle">К компании, которая устанавливала окно. При этом сообщите об этом и нам, чтобы остальные участники сервиса знали, можно ли доверять той или иной компании, оценивая её по рейтингу.</div>
+                    <div class="reviews-card-subtitle">К компании, которая устанавливала окно. При этом сообщите об этом и нам, чтобы остальные участники сервиса знали, можно ли доверять той или иной компании, оценивая её по рейтингу.</div>
+                  </div>
                 </div>
               </div>
-              <div class="reviews-card">
-                <div class="reviews-card-txt faq">
-                  <div class="reviews-card-title faq">При возникновении гарантийного случая куда мне обращаться? К вам или к компании, которая ставила окно?</div>
+            </div>
+            <div class="tab-content question-technical">
+              <div class="reviews-list">
+                <div class="reviews-card">
+                  <div class="reviews-card-txt faq">
+                    <div class="reviews-card-title faq">При возникновении гарантийного случая куда мне обращаться? К вам или к компании, которая ставила окно?</div>
 
-                  <div class="reviews-card-subtitle">К компании, которая устанавливала окно. При этом сообщите об этом и нам, чтобы остальные участники сервиса знали, можно ли доверять той или иной компании, оценивая её по рейтингу.</div>
+                    <div class="reviews-card-subtitle">К компании, которая устанавливала окно. При этом сообщите об этом и нам, чтобы остальные участники сервиса знали, можно ли доверять той или иной компании, оценивая её по рейтингу.</div>
+                  </div>
+                </div>
+                <div class="reviews-card">
+                  <div class="reviews-card-txt faq">
+                    <div class="reviews-card-title faq">При возникновении гарантийного случая куда мне обращаться? К вам или к компании, которая ставила окно?</div>
+
+                    <div class="reviews-card-subtitle">К компании, которая устанавливала окно. При этом сообщите об этом и нам, чтобы остальные участники сервиса знали, можно ли доверять той или иной компании, оценивая её по рейтингу.</div>
+                  </div>
+                </div>
+                <div class="reviews-card">
+                  <div class="reviews-card-txt faq">
+                    <div class="reviews-card-title faq">При возникновении гарантийного случая куда мне обращаться? К вам или к компании, которая ставила окно?</div>
+
+                    <div class="reviews-card-subtitle">К компании, которая устанавливала окно. При этом сообщите об этом и нам, чтобы остальные участники сервиса знали, можно ли доверять той или иной компании, оценивая её по рейтингу.</div>
+                  </div>
                 </div>
               </div>
-              <div class="reviews-card">
-                <div class="reviews-card-txt faq">
-                  <div class="reviews-card-title faq">При возникновении гарантийного случая куда мне обращаться? К вам или к компании, которая ставила окно?</div>
+            </div>
+            <div class="tab-content question-payment">
+              <div class="reviews-list">
+                <div class="reviews-card">
+                  <div class="reviews-card-txt faq">
+                    <div class="reviews-card-title faq">При возникновении гарантийного случая куда мне обращаться? К вам или к компании, которая ставила окно?</div>
 
-                  <div class="reviews-card-subtitle">К компании, которая устанавливала окно. При этом сообщите об этом и нам, чтобы остальные участники сервиса знали, можно ли доверять той или иной компании, оценивая её по рейтингу.</div>
+                    <div class="reviews-card-subtitle">К компании, которая устанавливала окно. При этом сообщите об этом и нам, чтобы остальные участники сервиса знали, можно ли доверять той или иной компании, оценивая её по рейтингу.</div>
+                  </div>
+                </div>
+                <div class="reviews-card">
+                  <div class="reviews-card-txt faq">
+                    <div class="reviews-card-title faq">При возникновении гарантийного случая куда мне обращаться? К вам или к компании, которая ставила окно?</div>
+
+                    <div class="reviews-card-subtitle">К компании, которая устанавливала окно. При этом сообщите об этом и нам, чтобы остальные участники сервиса знали, можно ли доверять той или иной компании, оценивая её по рейтингу.</div>
+                  </div>
+                </div>
+                <div class="reviews-card">
+                  <div class="reviews-card-txt faq">
+                    <div class="reviews-card-title faq">При возникновении гарантийного случая куда мне обращаться? К вам или к компании, которая ставила окно?</div>
+
+                    <div class="reviews-card-subtitle">К компании, которая устанавливала окно. При этом сообщите об этом и нам, чтобы остальные участники сервиса знали, можно ли доверять той или иной компании, оценивая её по рейтингу.</div>
+                  </div>
+                </div>
+                <div class="reviews-card">
+                  <div class="reviews-card-txt faq">
+                    <div class="reviews-card-title faq">При возникновении гарантийного случая куда мне обращаться? К вам или к компании, которая ставила окно?</div>
+
+                    <div class="reviews-card-subtitle">К компании, которая устанавливала окно. При этом сообщите об этом и нам, чтобы остальные участники сервиса знали, можно ли доверять той или иной компании, оценивая её по рейтингу.</div>
+                  </div>
+                </div>
+                <div class="reviews-card">
+                  <div class="reviews-card-txt faq">
+                    <div class="reviews-card-title faq">При возникновении гарантийного случая куда мне обращаться? К вам или к компании, которая ставила окно?</div>
+
+                    <div class="reviews-card-subtitle">К компании, которая устанавливала окно. При этом сообщите об этом и нам, чтобы остальные участники сервиса знали, можно ли доверять той или иной компании, оценивая её по рейтингу.</div>
+                  </div>
+                </div>
+                <div class="reviews-card">
+                  <div class="reviews-card-txt faq">
+                    <div class="reviews-card-title faq">При возникновении гарантийного случая куда мне обращаться? К вам или к компании, которая ставила окно?</div>
+
+                    <div class="reviews-card-subtitle">К компании, которая устанавливала окно. При этом сообщите об этом и нам, чтобы остальные участники сервиса знали, можно ли доверять той или иной компании, оценивая её по рейтингу.</div>
+                  </div>
                 </div>
               </div>
-              <div class="reviews-card">
-                <div class="reviews-card-txt faq">
-                  <div class="reviews-card-title faq">При возникновении гарантийного случая куда мне обращаться? К вам или к компании, которая ставила окно?</div>
+            </div>
+            <div class="tab-content question-legal">
+              <div class="reviews-list">
+                <div class="reviews-card">
+                  <div class="reviews-card-txt faq">
+                    <div class="reviews-card-title faq">При возникновении гарантийного случая куда мне обращаться? К вам или к компании, которая ставила окно?</div>
 
-                  <div class="reviews-card-subtitle">К компании, которая устанавливала окно. При этом сообщите об этом и нам, чтобы остальные участники сервиса знали, можно ли доверять той или иной компании, оценивая её по рейтингу.</div>
+                    <div class="reviews-card-subtitle">К компании, которая устанавливала окно. При этом сообщите об этом и нам, чтобы остальные участники сервиса знали, можно ли доверять той или иной компании, оценивая её по рейтингу.</div>
+                  </div>
                 </div>
-              </div>
-              <div class="reviews-card">
-                <div class="reviews-card-txt faq">
-                  <div class="reviews-card-title faq">При возникновении гарантийного случая куда мне обращаться? К вам или к компании, которая ставила окно?</div>
+                <div class="reviews-card">
+                  <div class="reviews-card-txt faq">
+                    <div class="reviews-card-title faq">При возникновении гарантийного случая куда мне обращаться? К вам или к компании, которая ставила окно?</div>
 
-                  <div class="reviews-card-subtitle">К компании, которая устанавливала окно. При этом сообщите об этом и нам, чтобы остальные участники сервиса знали, можно ли доверять той или иной компании, оценивая её по рейтингу.</div>
+                    <div class="reviews-card-subtitle">К компании, которая устанавливала окно. При этом сообщите об этом и нам, чтобы остальные участники сервиса знали, можно ли доверять той или иной компании, оценивая её по рейтингу.</div>
+                  </div>
+                </div>
+                <div class="reviews-card">
+                  <div class="reviews-card-txt faq">
+                    <div class="reviews-card-title faq">При возникновении гарантийного случая куда мне обращаться? К вам или к компании, которая ставила окно?</div>
+
+                    <div class="reviews-card-subtitle">К компании, которая устанавливала окно. При этом сообщите об этом и нам, чтобы остальные участники сервиса знали, можно ли доверять той или иной компании, оценивая её по рейтингу.</div>
+                  </div>
+                </div>
+                <div class="reviews-card">
+                  <div class="reviews-card-txt faq">
+                    <div class="reviews-card-title faq">При возникновении гарантийного случая куда мне обращаться? К вам или к компании, которая ставила окно?</div>
+
+                    <div class="reviews-card-subtitle">К компании, которая устанавливала окно. При этом сообщите об этом и нам, чтобы остальные участники сервиса знали, можно ли доверять той или иной компании, оценивая её по рейтингу.</div>
+                  </div>
+                </div>
+                <div class="reviews-card">
+                  <div class="reviews-card-txt faq">
+                    <div class="reviews-card-title faq">При возникновении гарантийного случая куда мне обращаться? К вам или к компании, которая ставила окно?</div>
+
+                    <div class="reviews-card-subtitle">К компании, которая устанавливала окно. При этом сообщите об этом и нам, чтобы остальные участники сервиса знали, можно ли доверять той или иной компании, оценивая её по рейтингу.</div>
+                  </div>
+                </div>
+                <div class="reviews-card">
+                  <div class="reviews-card-txt faq">
+                    <div class="reviews-card-title faq">При возникновении гарантийного случая куда мне обращаться? К вам или к компании, которая ставила окно?</div>
+
+                    <div class="reviews-card-subtitle">К компании, которая устанавливала окно. При этом сообщите об этом и нам, чтобы остальные участники сервиса знали, можно ли доверять той или иной компании, оценивая её по рейтингу.</div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -174,7 +307,7 @@
                 <form action="#">
                   <div class="mailing-title">Подпишись на рассылку</div>
 
-                  <input type="text" class="ui-input" placeholder="ivanov@gmail.com">
+                  <input type="text" class="mailing-input" placeholder="ivanov@gmail.com">
 
                   <div class="ui-checkbox">
                     <input autocomplete="off" type="checkbox" id="customCheckbox" class="ui-checkbox-input" name="checkbox" checked="">
