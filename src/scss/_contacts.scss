@@ -1,0 +1,74 @@
+.contacts {
+  &-title {
+    font-weight: 600;
+    font-size: 28px;
+    margin-bottom: 27px;
+  }
+
+  &-info {
+    padding-left: 28px;
+    position: relative;
+    margin-bottom: 24px;
+    font-size: 18px;
+    color: #1D1D1D;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    span {
+      font-weight: 400;
+      font-size: 16px;
+      color: #B0C0D2;
+    }
+
+    img {
+      position: absolute;
+      left: 0;
+      top: 4px;
+    }
+  }
+
+  &-block {
+    margin-bottom: 85px;
+  }
+}
+
+.feedback {
+  &-title {
+    font-weight: 600;
+    font-size: 28px;
+    color: #1D1D1D;
+    margin-bottom: 31px;
+  }
+
+  .ui-input {
+    max-width: none;
+  }
+
+  .ui-checkbox-label span {
+    color: #1D1D1D;
+  }
+
+  .ui-checkbox a {
+    color: #EE8F00;
+  }
+
+  .ui-checkbox {
+    margin-bottom: 30px;
+  }
+
+  .ui-btn {
+    max-width: 232px;
+    width: 100%;
+  }
+}
+
+.contact-map {
+  height: 100%;
+}
+
+#map {
+  margin-right: 0;
+  margin-left: auto;
+}

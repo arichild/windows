@@ -1,0 +1,187 @@
+<!--#include file="inc-header.html"-->
+
+<div class="middle" id="middle">
+  <div class="page-wrapper">
+    <div class="container">
+      <div class="ui-breadcrumbs">
+        <a href="#" class="ui-breadcrumbs-link">Главная</a>
+        <span>Контакты</span>
+      </div>
+
+      <div class="ui-heading flex">
+        <div class="ui-heading-txt flex">
+          <div class="ui-title">Контакты</div>
+        </div>
+      </div>
+
+      <div class="contacts">
+        <div class="row">
+          <div class="col-md-5">
+            <div class="contacts-block">
+              <div class="contacts-title">Наши контакты</div>
+              <div class="contacts-info">
+                <img src="./images/icon/location.svg" alt="alt">
+                Москва, ул. Советская, д. 21
+              </div>
+              <div class="contacts-info">
+                <img src="./images/icon/phone.svg" alt="alt">
+                <a href="#">8 800 555-35-35</a> <span>(мы работаем с пн-пт с 9:00 до 18:00)</span>
+              </div>
+              <div class="contacts-info">
+                <img src="./images/icon/email.svg" alt="alt">
+                <a href="#">support@project.ru</a>
+              </div>
+            </div>
+
+            <div class="feedback">
+              <div class="feedback-title">Обратная связь</div>
+
+              <form action="#" class="feedback-form">
+                <div class="ui-field">
+                  <label class="ui-label" for="phone">ФИО <span>*</span></label>
+
+                  <div class="ui-input-field">
+                    <input type="text" name="name" id="name" class="ui-input" placeholder="Ваше ФИО">
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="ui-field">
+                      <label class="ui-label" for="email">Email <span>*</span></label>
+
+                      <div class="ui-input-field">
+                        <input type="text" name="email" id="email" class="ui-input" placeholder="Ваш email">
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-md-6">
+                    <div class="ui-field">
+                      <label class="ui-label" for="phone">Телефон <span>*</span></label>
+
+                      <div class="ui-input-field">
+                        <input type="text" name="phone" id="phone" class="ui-input" placeholder="Ваш телефон">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="ui-field">
+                  <label class="ui-label">Сообщение <span>*</span></label>
+                  <textarea id="msg" name="msg" class="ui-input" rows="4" placeholder="Напишите сообщение"></textarea>
+                </div>
+
+                <div class="ui-checkbox">
+                  <input autocomplete="off" type="checkbox" id="customCheckbox" class="ui-checkbox-input" name="checkbox">
+                  <label for="customCheckbox" class="ui-checkbox-label">
+                    <span class="default-txt">
+                      Соглашаюсь с <a href="#">Политикой работы с персональными данными</a>
+                    </span>
+                  </label>
+                </div>
+
+                <button class="ui-btn">Отправить сообщение</button>
+              </form>
+
+              <script>
+                document.addEventListener("DOMContentLoaded", () => {
+                  $( document ).ready(function() {
+                    $(".feedback-form").validate({
+                      errorElement: "span",
+
+                      rules: {
+                        name: {
+                          required: true,
+                          fullName: true
+                        },
+
+                        email : {
+                          required: true,
+                          email: true,
+                        },
+
+                        phone: {
+                          required: true,
+                          phone: true,
+                        },
+
+                        msg : {
+                          required: true,
+                        },
+
+                        checkbox: {
+                          required: true,
+                        },
+                      },
+
+                      messages: {
+                        email : {
+                          email: 'Введите корректный email',
+                        },
+
+                        checkbox: {
+                          required: 'Пожалуйста подтвердите условия соглашения'
+                        },
+                      },
+
+                      errorPlacement: function (error, element) {
+                        if (element.hasClass('ui-input')) {
+                          element.closest('.ui-field').append(error);
+                        }
+
+                        if (element.hasClass('ui-checkbox-input')) {
+                          element.closest('.ui-checkbox').append(error);
+                        }
+
+                        if (element.hasClass('password')) {
+                          element.closest('.ui-input-password').after(error);
+                        }
+
+                        if (element.hasClass('ui-select')) {
+                          element.closest('.jq-selectbox').after(error);
+                        }
+                      },
+                    });
+                  });
+                });
+              </script>
+            </div>
+          </div>
+
+          <div class="col-md-7">
+            <div class="contact-map">
+              <div id="map" style="width: 720px; height: 960px"></div>
+
+              <script>
+                window.onload = function() {
+                  const script = document.createElement("script");
+
+                  script.src = "//api-maps.yandex.ru/2.1/?lang=ru_RU"
+
+                  document.body.appendChild(script)
+
+                  script.onload = function() {
+                    var myMap;
+                    ymaps.ready(init);
+
+                    function init () {
+                      myMap = new ymaps.Map('map', {
+                          center: [55.791587, 37.210159],
+                          zoom: 14,
+                      }, {
+                          searchControlProvider: 'yandex#search'
+                      })
+                    }
+                  }
+                }
+            </script>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--#include file="inc-footer.html"-->

@@ -72,62 +72,60 @@
       phoneValidate();
       $('select.ui-select').styler();
 
-      $( document ).ready(function() {
-        $(".popup-form").validate({
-          errorElement: "span",
+      $(".popup-form").validate({
+        errorElement: "span",
 
-          rules: {
-            name: {
-              required: true,
-              lettersonly: true
-            },
-
-            email : {
-              required: true,
-              email: true,
-            },
-
-            msg : {
-              required: true,
-            },
-
-            checkbox: {
-              required: true,
-            },
+        rules: {
+          name: {
+            required: true,
+            lettersonly: true
           },
 
-          messages: {
-            email : {
-              email: 'Введите корректный email',
-            },
-
-            checkbox: {
-              required: 'Пожалуйста подтвердите условия соглашения'
-            },
+          email : {
+            required: true,
+            email: true,
           },
 
-          errorPlacement: function (error, element) {
-            if (element.hasClass('ui-input')) {
-              element.closest('.ui-field').append(error);
-            }
-
-            if (element.hasClass('ui-checkbox-input')) {
-              element.closest('.ui-checkbox').append(error);
-            }
-
-            if (element.hasClass('password')) {
-              element.closest('.ui-input-password').after(error);
-            }
-
-            if (element.hasClass('ui-select')) {
-              element.closest('.jq-selectbox').after(error);
-            }
+          msg : {
+            required: true,
           },
 
-          submitHandler: function (form) {
-            showPopup()
+          checkbox: {
+            required: true,
           },
-        });
+        },
+
+        messages: {
+          email : {
+            email: 'Введите корректный email',
+          },
+
+          checkbox: {
+            required: 'Пожалуйста подтвердите условия соглашения'
+          },
+        },
+
+        errorPlacement: function (error, element) {
+          if (element.hasClass('ui-input')) {
+            element.closest('.ui-field').append(error);
+          }
+
+          if (element.hasClass('ui-checkbox-input')) {
+            element.closest('.ui-checkbox').append(error);
+          }
+
+          if (element.hasClass('password')) {
+            element.closest('.ui-input-password').after(error);
+          }
+
+          if (element.hasClass('ui-select')) {
+            element.closest('.jq-selectbox').after(error);
+          }
+        },
+
+        submitHandler: function (form) {
+          showPopup()
+        },
       });
     });
   </script>

@@ -41,6 +41,16 @@ jQuery.validator.addMethod("lettersonly", function(value, element) {
   return this.optional(element) || /^([а-яё ]+|[a-z ]+)$/i.test(value);
 }, "Поле может состоять из букв, пробелов, без цифр");
 
+jQuery.validator.addMethod("fullName", function (value, element) {
+  let chunks = value.split(' ')
+
+  if (chunks.length === 3 && chunks.indexOf('') === -1) {
+    return true
+  } else {
+    return false
+  }
+}, "Введите корректное ФИО");
+
 jQuery.validator.addMethod("phone", function (value, element) {
   if (value.startsWith('+375')) {
     return /^(\s*)?(\+)?([- _():=+]?\d[- _():=+]?){12}(\s*)?$/i.test(value);
@@ -90,6 +100,9 @@ function phoneValidate() {
     })
   }
 }
+
+showPassword();
+phoneValidate();
 
 (function($) {
   $(function() {

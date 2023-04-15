@@ -109,93 +109,91 @@
       phoneValidate();
       $('select.ui-select').styler();
 
-      $( document ).ready(function() {
-        $(".popup-form").validate({
-          errorElement: "span",
+      $(".popup-form").validate({
+        errorElement: "span",
 
-          rules: {
-            name: {
-              required: true,
-              lettersonly: true
-            },
-
-            town: {
-              required: true,
-            },
-
-            email : {
-              required: true,
-              email: true,
-            },
-
-            phone: {
-              required: true,
-              phone: true,
-            },
-
-            password: {
-              required: true,
-              min: 8,
-            },
-
-            password_confirm: {
-              min: 8,
-              equalTo: "#password"
-            },
-
-            checkbox: {
-              required: true,
-            },
-
-            checkbox1: {
-              required: true,
-            },
+        rules: {
+          name: {
+            required: true,
+            lettersonly: true
           },
 
-          messages: {
-            password: {
-              min: 'Минимальная длина пароля 8 символов'
-            },
-
-            password_confirm: {
-              equalTo: 'Пароли должны совпадать'
-            },
-
-            email : {
-              email: 'Введите корректный email',
-            },
-
-            town: {
-              required: 'Пожалуйста, выберете город'
-            },
-
-            checkbox: {
-              required: 'Пожалуйста подтвердите условия соглашения'
-            },
-
-            checkbox1: {
-              required: 'Пожалуйста подтвердите условия соглашения'
-            }
+          town: {
+            required: true,
           },
 
-          errorPlacement: function (error, element) {
-            if (element.hasClass('ui-input')) {
-              element.closest('.ui-field').append(error);
-            }
-
-            if (element.hasClass('ui-checkbox-input')) {
-              element.closest('.ui-checkbox').append(error);
-            }
-
-            if (element.hasClass('password')) {
-              element.closest('.ui-input-password').after(error);
-            }
-
-            if (element.hasClass('ui-select')) {
-              element.closest('.jq-selectbox').after(error);
-            }
+          email : {
+            required: true,
+            email: true,
           },
-        });
+
+          phone: {
+            required: true,
+            phone: true,
+          },
+
+          password: {
+            required: true,
+            min: 8,
+          },
+
+          password_confirm: {
+            min: 8,
+            equalTo: "#password"
+          },
+
+          checkbox: {
+            required: true,
+          },
+
+          checkbox1: {
+            required: true,
+          },
+        },
+
+        messages: {
+          password: {
+            min: 'Минимальная длина пароля 8 символов'
+          },
+
+          password_confirm: {
+            equalTo: 'Пароли должны совпадать'
+          },
+
+          email : {
+            email: 'Введите корректный email',
+          },
+
+          town: {
+            required: 'Пожалуйста, выберете город'
+          },
+
+          checkbox: {
+            required: 'Пожалуйста подтвердите условия соглашения'
+          },
+
+          checkbox1: {
+            required: 'Пожалуйста подтвердите условия соглашения'
+          }
+        },
+
+        errorPlacement: function (error, element) {
+          if (element.hasClass('ui-input')) {
+            element.closest('.ui-field').append(error);
+          }
+
+          if (element.hasClass('ui-checkbox-input')) {
+            element.closest('.ui-checkbox').append(error);
+          }
+
+          if (element.hasClass('password')) {
+            element.closest('.ui-input-password').after(error);
+          }
+
+          if (element.hasClass('ui-select')) {
+            element.closest('.jq-selectbox').after(error);
+          }
+        },
       });
     });
   </script>

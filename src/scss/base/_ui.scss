@@ -181,8 +181,8 @@
       left: 50%;
       top: 50%;
       transform: translate(-50%, -50%);
-      width: 28px;
-      height: 28px;
+      width: 33px;
+      height: 33px;
     }
   }
 
@@ -222,10 +222,15 @@
       margin-right: 35px;
       font-size: 18px;
       border: none;
-      padding: 0;
+      padding-left: 0;
+      padding-right: 0;
       background-color: transparent;
       cursor: pointer;
       font-family: Gilroy;
+
+      // &:hover {
+      //   font-weight: 600;
+      // }
 
       &:last-child {
         margin-right: 0;
@@ -359,8 +364,9 @@
       svg {
         position: absolute;
         width: 20px;
+        height: 20px;
         right: 0;
-        top: 0;
+        top: 5px;
         fill: #B0C0D2;
         cursor: pointer;
 
@@ -723,7 +729,7 @@ svg.sprite {
   background-position: 0 100%;
   background-size: 4px;
   background-repeat: repeat-x;
-  padding-bottom: 2px;
+  padding-bottom: 4px;
 }
 
 .ui-label {
