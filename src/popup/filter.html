@@ -1,0 +1,111 @@
+<div class="ui-popup popup-filter">
+  <div class="ui-popup-head">Фильтрация заявок</div>
+
+  <div class="ui-popup-body">
+    <form action="#" class="popup-form">
+      <div class="ui-set flex">
+        <div class="ui-set-title">Виды работ</div>
+
+        <div class="ui-set-checkbox">
+          <div class="ui-checkbox">
+            <input autocomplete="off" type="checkbox" id="customCheckbox" class="ui-checkbox-input" name="checkbox">
+            <label for="customCheckbox" class="ui-checkbox-label">
+              <span class="default-txt">Установка окон</span>
+            </label>
+          </div>
+          <div class="ui-checkbox">
+            <input autocomplete="off" type="checkbox" id="customCheckbox1" class="ui-checkbox-input" name="checkbox">
+            <label for="customCheckbox1" class="ui-checkbox-label">
+              <span class="default-txt">Установка балконных блоков</span>
+            </label>
+          </div>
+          <div class="ui-checkbox">
+            <input autocomplete="off" type="checkbox" id="customCheckbox2" class="ui-checkbox-input" name="checkbox">
+            <label for="customCheckbox2" class="ui-checkbox-label">
+              <span class="default-txt">Остекление балкона</span>
+            </label>
+          </div>
+        </div>
+      </div>
+
+      <div class="ui-set flex">
+        <div class="ui-set-title">Конфигурация</div>
+
+        <div class="ui-set-checkbox">
+          <div class="ui-checkbox">
+            <input autocomplete="off" type="checkbox" id="customCheckbox3" class="ui-checkbox-input" name="checkbox">
+            <label for="customCheckbox3" class="ui-checkbox-label">
+              <span class="default-txt">Стандарт</span>
+            </label>
+          </div>
+          <div class="ui-checkbox">
+            <input autocomplete="off" type="checkbox" id="customCheckbox4" class="ui-checkbox-input" name="checkbox">
+            <label for="customCheckbox4" class="ui-checkbox-label">
+              <span class="default-txt">Эконом</span>
+            </label>
+          </div>
+          <div class="ui-checkbox">
+            <input autocomplete="off" type="checkbox" id="customCheckbox5" class="ui-checkbox-input" name="checkbox">
+            <label for="customCheckbox5" class="ui-checkbox-label">
+              <span class="default-txt">Идеал</span>
+            </label>
+          </div>
+        </div>
+      </div>
+
+      <div class="ui-set flex">
+        <div class="ui-set-title">Бюджет</div>
+
+        <div class="popup-filter-budget">
+          <span>от</span>
+
+          <input type="number" placeholder="0" class="ui-input" min="0">
+
+          <span>до</span>
+
+          <input type="number" placeholder="0" class="ui-input" min="0">
+
+          <span>руб.</span>
+        </div>
+      </div>
+
+      <div class="ui-set flex">
+        <div class="ui-set-title">Клиенты</div>
+
+        <div class="ui-set-checkbox">
+          <div class="ui-checkbox">
+            <input autocomplete="off" type="checkbox" id="customCheckbox6" class="ui-checkbox-input" name="checkbox">
+            <label for="customCheckbox6" class="ui-checkbox-label">
+              <span class="default-txt">Физические лица</span>
+            </label>
+          </div>
+          <div class="ui-checkbox">
+            <input autocomplete="off" type="checkbox" id="customCheckbox7" class="ui-checkbox-input" name="checkbox">
+            <label for="customCheckbox7" class="ui-checkbox-label">
+              <span class="default-txt">Юридические лица</span>
+            </label>
+          </div>
+        </div>
+      </div>
+
+      <div class="popup-filter-btn flex">
+        <button class="ui-btn">Применить</button>
+        <button class="popup-filter-reset">Сбросить всё</button>
+      </div>
+    </form>
+  </div>
+
+  <script>
+    const resetFilterBtn = document.querySelector('.popup-filter-reset')
+
+    resetFilterBtn.addEventListener('click', (e) => {
+      e.preventDefault()
+
+      const allCheckbox = document.querySelectorAll('.ui-checkbox input')
+
+      allCheckbox.forEach(item => {
+        item.checked = false
+      })
+    })
+  </script>
+</div>

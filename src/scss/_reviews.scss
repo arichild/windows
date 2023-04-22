@@ -23,10 +23,15 @@
     }
 
     &-txt {
-      padding-left: 66px;
       position: relative;
 
+      &.mb-32 {
+        margin-bottom: 32px;
+      }
+
       &.dislike {
+        padding-left: 66px;
+
         &::before {
           content: '';
           background-image: url('../images/icon/dislike.svg');
@@ -47,6 +52,8 @@
       }
 
       &.like {
+        padding-left: 66px;
+
         &::before {
           content: '';
           background-image: url('../images/icon/like.svg');
@@ -67,6 +74,8 @@
       }
 
       &.faq {
+        padding-left: 66px;
+
         &::before {
           content: '';
           background-image: url('../images/icon/faq.svg');
@@ -91,10 +100,40 @@
       }
     }
 
+    &-bottom {
+      justify-content: space-between;
+      align-items: center;
+
+      &.active {
+        margin-bottom: 40px;
+      }
+    }
+
+    &-date {
+      font-size: 18px;
+      color: #90A1BA;
+    }
+
+    .ui-btn {
+      border-color: #DCE5EF;
+      font-weight: 400;
+      font-size: 14px;
+      max-width: 108px;
+      width: 100%;
+    }
+
     &-title {
       font-weight: 500;
       font-size: 24px;
       margin-bottom: 22px;
+      position: relative;
+      padding-right: 120px;
+
+      .ui-rating {
+        position: absolute;
+        right: 0;
+        top: 6px;
+      }
 
       &.faq {
         font-weight: 600;
@@ -133,6 +172,68 @@
 
       @media(max-width: 1024px) {
         font-size: 16px;
+      }
+    }
+
+    &-show {
+      background-color: transparent;
+      border: none;
+      font-size: 18px;
+      color: #90A1BA;
+      font-weight: 400;
+      font-family: Gilroy;
+      padding: 0;
+      position: relative;
+      padding-right: 20px;
+
+      &::before {
+        content: '';
+        background-image: url('../images/icon/answer-arrow.svg');
+        background-repeat: no-repeat;
+        background-size: 12px;
+        width: 12px;
+        height: 8px;
+        position: absolute;
+        right: 0;
+        top: 8px;
+        transform: rotate(180deg);
+        transition: transform .2s;
+      }
+
+      &.active {
+        &::before {
+          transform: rotate(0);
+        }
+      }
+    }
+
+    &-answer {
+      padding: 25px 30px;
+      background: #FAFCFF;
+      color: #1D1D1D;
+      font-size: 18px;
+      display: none;
+
+      &.active {
+        display: block;
+      }
+
+      &-title {
+        font-weight: 600;
+        margin-bottom: 15px;
+      }
+
+      &-subtitle {
+        margin-bottom: 22px;
+        max-width: 777px;
+      }
+
+      &-date {
+        margin-right: 30px;
+      }
+
+      &-bottom {
+        align-items: center;
       }
     }
   }
@@ -174,6 +275,12 @@
 
   .ui-checkbox {
     margin-bottom: 27px;
+
+    &-label {
+      span {
+        color: #fff;
+      }
+    }
   }
 
   .ui-btn {

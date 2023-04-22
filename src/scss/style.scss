@@ -20,11 +20,14 @@
 @import "news";
 @import "pages";
 @import "contacts";
+@import "services";
 
 // popup
 @import "./popup/sign-in.scss";
 @import "./popup/sign-up.scss";
 @import "./popup/question.scss";
+@import "./popup/reviews-answer.scss";
+@import "./popup/filter.scss";
 
 
 * {

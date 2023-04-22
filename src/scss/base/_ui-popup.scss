@@ -10,6 +10,10 @@
     max-width: 478px;
   }
 
+  &.popup-answer {
+    max-width: 716px;
+  }
+
   &.center {
     text-align: center;
 
@@ -34,6 +38,10 @@
       right: 20px;
       top: 20px;
     }
+  }
+
+  &-link {
+    color: #EE8F00;
   }
 
   &-head {
@@ -65,10 +73,6 @@
   }
 
   &-checkbox {
-    .ui-checkbox-label span {
-      color: #1D1D1D;
-    }
-
     .ui-checkbox a {
       color: #EE8F00;
     }

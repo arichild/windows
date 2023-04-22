@@ -1,0 +1,31 @@
+.popup-answer {
+  .ui-rating {
+    margin-right: 18px;
+  }
+
+  .ui-btn {
+    max-width: 217px;
+    width: 100%;
+  }
+
+  &-head {
+    align-items: center;
+    margin-bottom: 28px;
+  }
+
+  &-title {
+    font-size: 18px;
+    font-weight: 600;
+    color: #1D1D1D;
+
+    span {
+      font-weight: 400;
+      color: #90A1BA;
+    }
+  }
+
+  &-txt {
+    font-size: 18px;
+    margin-bottom: 50px;
+  }
+}

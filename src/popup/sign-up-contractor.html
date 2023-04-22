@@ -1,0 +1,165 @@
+<div class="ui-popup sign-up">
+  <div class="ui-popup-head">Регистрация Исполнителя</div>
+
+  <div class="ui-popup-body sign-in">
+    <form action="#" class="popup-form">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="ui-field">
+            <label class="ui-label" for="name">Имя <span>*</span></label>
+
+            <div class="ui-input-field">
+              <input type="text" name="name" id="name" class="ui-input" placeholder="Ваше имя">
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="ui-field">
+            <label class="ui-label" for="phone">Телефон <span>*</span></label>
+
+            <div class="ui-input-field">
+              <input type="text" name="phone" id="phone" class="ui-input" placeholder="Введите номер телефона">
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="ui-field">
+            <label class="ui-label" for="email">Email <span>*</span></label>
+
+            <div class="ui-input-field">
+              <input type="text" name="email" id="email" class="ui-input" placeholder="email@site.ru">
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="ui-field">
+            <label class="ui-label">Город <span>*</span></label>
+
+            <div class="ui-input-wrp">
+              <label for="town" class="ui-label"></label>
+
+              <select name="town" id="town" class="ui-select" data-placeholder="Ваш город">
+                <option value=""></option>
+                <option value="Город 2">Город 2</option>
+                <option value="Город 3">Город 3</option>
+                <option value="Город 4">Город 4</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-12">
+          <div class="ui-field">
+            <label class="ui-label" for="company">Название компании <span>*</span></label>
+
+            <div class="ui-input-field">
+              <input type="text" name="company" id="company" class="ui-input" placeholder="Ваша компания">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="ui-popup-checkbox">
+        <div class="ui-checkbox">
+          <input autocomplete="off" type="checkbox" id="customCheckbox" class="ui-checkbox-input" name="checkbox">
+          <label for="customCheckbox" class="ui-checkbox-label">
+            <span class="default-txt">
+              Я соглашаюсь с <a href="#">Политикой работы с персональными данными</a>
+            </span>
+          </label>
+        </div>
+
+        <div class="ui-checkbox">
+          <input autocomplete="off" type="checkbox" id="customCheckbox1" class="ui-checkbox-input" name="checkbox1">
+          <label for="customCheckbox1" class="ui-checkbox-label">
+            <span class="default-txt">
+              Я соглашаюсь с <a href="#">Пользовательским соглашением</a>
+            </span>
+          </label>
+        </div>
+      </div>
+
+      <button class="ui-btn">Зарегистрироваться</button>
+    </form>
+  </div>
+
+  <script>
+    $( document ).ready(function() {
+      showPassword();
+      phoneValidate();
+      $('select.ui-select').styler();
+
+      $(".popup-form").validate({
+        errorElement: "span",
+
+        rules: {
+          name: {
+            required: true,
+            lettersonly: true
+          },
+
+          town: {
+            required: true,
+          },
+
+          email : {
+            required: true,
+            email: true,
+          },
+
+          phone: {
+            required: true,
+            phone: true,
+          },
+
+          company: {
+            required: true,
+          },
+
+          checkbox: {
+            required: true,
+          },
+
+          checkbox1: {
+            required: true,
+          },
+        },
+
+        messages: {
+          email : {
+            email: 'Введите корректный email',
+          },
+
+          town: {
+            required: 'Пожалуйста, выберете город'
+          },
+
+          checkbox: {
+            required: 'Пожалуйста подтвердите условия соглашения'
+          },
+
+          checkbox1: {
+            required: 'Пожалуйста подтвердите условия соглашения'
+          }
+        },
+
+        errorPlacement: function (error, element) {
+          if (element.hasClass('ui-input')) {
+            element.closest('.ui-field').append(error);
+          }
+
+          if (element.hasClass('ui-checkbox-input')) {
+            element.closest('.ui-checkbox').append(error);
+          }
+
+          if (element.hasClass('password')) {
+            element.closest('.ui-input-password').after(error);
+          }
+
+          if (element.hasClass('ui-select')) {
+            element.closest('.jq-selectbox').after(error);
+          }
+        },
+      });
+    });
+  </script>
+</div>

@@ -1,0 +1,93 @@
+.services {
+  padding-top: 15px;
+
+  .ui-btn {
+    max-width: 195px;
+    width: 100%;
+  }
+
+  &-title {
+    font-weight: 600;
+    font-size: 36px;
+    color: #1D1D1D;
+    margin-bottom: 40px;
+  }
+
+  &-sets {
+    margin-bottom: 80px;
+  }
+
+  &-profile {
+    &-name {
+      font-size: 18px;
+      color: #1D1D1D;
+      margin-bottom: 20px;
+      line-height: 1;
+      position: relative;
+
+      img {
+        display: none;
+        position: absolute;
+        right: 0;
+        top: 0;
+        cursor: pointer;
+
+        &:hover {
+          opacity: .8;
+        }
+      }
+
+      &:hover {
+        img {
+          display: block;
+        }
+      }
+    }
+
+    &-set {
+      max-width: 385px;
+      width: 100%;
+    }
+
+    &-add {
+      display: inline-block;
+      font-size: 14px;
+      color: #657792;
+      border: 1px solid #B0C0D2;
+      padding: 8px 16px;
+      text-align: center;
+      border-radius: 2px;
+    }
+  }
+
+  &-color {
+    width: 36px;
+    height: 36px;
+    border-radius: 2px;
+    margin-right: 8px;
+
+    &.blue {
+      background-color: #005EB5;
+    }
+
+    &.brown {
+      background-color: #813308;
+    }
+
+    &-add {
+      padding: 11px;
+      width: 36px;
+      height: 36px;
+      border: 1px solid #B0C0D2;
+      border-radius: 2px;
+      position: relative;
+
+      img {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+      }
+    }
+  }
+}

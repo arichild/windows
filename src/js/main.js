@@ -16,9 +16,9 @@ function showPassword() {
   })
 }
 
-function showPopup() {
+function showPopup(path) {
   $.magnificPopup.open({
-    items: { src: './popup/accept.html' },
+    items: { src: path },
     type: 'ajax',
     overflowY: 'scroll',
     removalDelay: 300,
@@ -205,4 +205,39 @@ $( document ).ready(function() {
     });
     return false;
   });
+
+  const profileBtn = document.querySelectorAll('.services-profile-name img');
+
+  if(profileBtn !== undefined || profileBtn.length) {
+    profileBtn.forEach(item => {
+      item.addEventListener('click', () => {
+        const profile = item.closest('.services-profile-name')
+
+        profile.remove()
+      })
+    })
+  }
 });
+
+const showAnswerBtn = document.querySelectorAll('.reviews-card-show')
+
+if(showAnswerBtn !== undefined || showAnswerBtn.length) {
+  showAnswerBtn.forEach(item => {
+    item.addEventListener('click', () => {
+      const parent = item.closest('.reviews-card')
+      const bottomBlock = parent.querySelector('.reviews-card-bottom')
+      const answer = parent.querySelector('.reviews-card-answer')
+      const text = item.querySelector('span')
+
+      bottomBlock.classList.toggle('active')
+      answer.classList.toggle('active')
+      item.classList.toggle('active')
+
+      if(bottomBlock.classList.contains('active')) {
+        text.innerText = 'Скрыть ответ'
+      } else {
+        text.innerText = 'Показать ответ'
+      }
+    })
+  })
+}
