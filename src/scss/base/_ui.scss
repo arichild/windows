@@ -986,3 +986,21 @@ span.error {
     background-size: cover;
   }
 }
+
+.ui-pin {
+  input {
+    max-width: 32px;
+    height: 48px;
+    border: 1px solid #B0C0D2;
+    border-radius: 2px;
+    text-align: center;
+  }
+
+  .space {
+    width: 12px;
+    height: 1px;
+    background: #1D1D1D;
+    margin: 0 8px;
+    display: inline-block;
+  }
+}

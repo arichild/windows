@@ -6,6 +6,10 @@
   position: relative;
   box-shadow: 0px 4px 35px rgba(114, 142, 174, 0.2);
 
+  .ui-btn {
+    height: 56px;
+  }
+
   &.sign-in {
     max-width: 478px;
   }

@@ -1,0 +1,32 @@
+.pin-code {
+  .ui-btn {
+    max-width: 285px;
+    width: 100%;
+    margin-bottom: 35px;
+  }
+
+  .ui-label {
+    margin-bottom: 14px;
+  }
+
+  &-subtitle {
+    font-size: 18px;
+    color: #1D1D1D;
+    margin-bottom: 30px;
+  }
+
+  &-link {
+    margin-bottom: 30px;
+
+    a {
+      color: #EE8F00;
+      border-bottom: 1px solid #EE8F00;
+    }
+  }
+
+  &-desc {
+    font-size: 14px;
+    color: #90A1BA;
+    max-width: 500px;
+  }
+}

@@ -159,6 +159,10 @@
             element.closest('.jq-selectbox').after(error);
           }
         },
+
+        submitHandler: function (form) {
+          showPopup('./popup/pin-code.html')
+        },
       });
     });
   </script>

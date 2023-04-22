@@ -1,0 +1,96 @@
+<div class="ui-popup pin-code">
+  <div class="ui-popup-head">Регистрация Исполнителя</div>
+
+  <div class="ui-popup-body">
+    <div class="pin-code-subtitle">В течение 5 минут вы получите смс с кодом подтверждения. Введите его ниже:</div>
+
+    <form action="#" class="popup-form">
+      <div class="ui-field">
+        <label class="ui-label" for="pin">Код из СМС <span>*</span></label>
+
+        <div class="ui-pin">
+          <input type="text" maxlength="1">
+          <input type="text" maxlength="1">
+          <input type="text" maxlength="1">
+          <div class="space"></div>
+          <input type="text" maxlength="1">
+          <input type="text" maxlength="1">
+          <input type="text" maxlength="1" id="pin">
+        </div>
+      </div>
+
+      <div class="pin-code-link">Не получили SMS? <a href="#">Отправить повторно</a></div>
+
+      <button class="ui-btn">Завершить регистрацию</button>
+
+      <div class="pin-code-desc">Не бойтесь, мы будетм надёжно хранить его и не покажем его никому, кроме Заказчиков, принявших решение работать с вами.</div>
+    </form>
+  </div>
+
+  <script>
+    $( document ).ready(function() {
+      const pinContainer = document.querySelector(".ui-pin");
+      const arr = []
+
+      pinContainer.addEventListener('keyup', function (event) {
+        let target = event.srcElement;
+
+        let maxLength = parseInt(target.attributes["maxlength"].value, 10);
+        let myLength = target.value.length;
+
+        arr.push(myLength)
+
+        console.log(arr)
+
+        if(myLength >= maxLength) {
+          let next = target;
+
+          while(next = next.nextElementSibling) {
+            if (next == null) break;
+
+            if(next.tagName.toLowerCase() == "input") {
+              next.focus();
+              break;
+            }
+          }
+        }
+
+        if(myLength === 0) {
+          let next = target;
+
+          while(next = next.previousElementSibling) {
+            if(next == null) break;
+
+            if(next.tagName.toLowerCase() == "input") {
+              next.focus();
+              break;
+            }
+          }
+        }
+      }, false);
+
+      pinContainer.addEventListener('keydown', function (event) {
+        let target = event.srcElement;
+
+        target.value = "";
+      }, false);
+
+
+      $(".popup-form").validate({
+        errorElement: "span",
+
+        // rule: {
+        //   pin: {
+        //     required: true
+        //   }
+        // },
+
+        submitHandler: function (form) {
+          if(arr.length === 6) {
+            showPopup('./popup/success.html')
+          }
+        },
+      });
+    });
+  </script>
+</div>
