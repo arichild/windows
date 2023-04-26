@@ -241,3 +241,32 @@ if(showAnswerBtn !== undefined || showAnswerBtn.length) {
     })
   })
 }
+
+const fav = document.querySelectorAll('.order-table-fav')
+
+if(fav !== undefined || fav.length) {
+  fav.forEach(item => {
+    item.addEventListener('click', () => {
+      const parent = item.closest('.order-table-cells')
+
+      parent.classList.toggle('active')
+      item.classList.toggle('active')
+    })
+  })
+}
+
+const filterFav = document.querySelector('.order-fav input')
+
+filterFav.addEventListener('change', () => {
+  const orders = document.querySelectorAll('.order-table-cells')
+
+
+
+  orders.forEach(item => {
+    if(!item.classList.contains('active') && filterFav.checked === true) {
+      item.style.display = 'none'
+    } else {
+      item.style.display = 'flex'
+    }
+  })
+})

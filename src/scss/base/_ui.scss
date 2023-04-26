@@ -872,6 +872,17 @@ span.error {
   font-size: 14px;
 }
 
+span.pin-error {
+  color: #bc0000;
+  margin-top: 5px;
+  display: inline-block;
+  font-size: 14px;
+
+  &.hidden {
+    display: none;
+  }
+}
+
 // .ui-input.error {
 //   margin-bottom: 5px;
 // }

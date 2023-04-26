@@ -1,0 +1,160 @@
+<!--#include file="inc-header.html"-->
+
+<div class="middle" id="middle">
+  <div class="page-wrapper">
+    <div class="container">
+      <div class="ui-breadcrumbs">
+        <a href="#" class="ui-breadcrumbs-link">Главная</a>
+        <span>Отзывы</span>
+      </div>
+
+      <div class="ui-heading flex">
+        <div class="ui-heading-txt flex">
+          <div class="ui-title">Заказы <span>143</span></div>
+
+          <div class="order-search">
+            <form action="#">
+              <input type="text" placeholder="Быстрый поиск">
+
+              <button>Найти</button>
+            </form>
+          </div>
+
+          <div class="order-filter">
+            <img src="./images/icon/filter.svg" alt="alt">
+
+            <a href="javascript:void(0)" data-href="./popup/filter.html" class="mfp-link underline">Настроить фильтр</a>
+          </div>
+
+          <div class="order-fav">
+            <div class="ui-checkbox">
+              <input autocomplete="off" type="checkbox" id="customCheckbox" class="ui-checkbox-input" name="checkbox">
+              <label for="customCheckbox" class="ui-checkbox-label">
+                <img src="./images/icon/fav.svg" alt="alt">
+                <span class="default-txt">Показывать только отмеченные</span>
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="order">
+        <div class="order-table">
+          <div class="order-table-head flex">
+            <div class="order-table-title table-column-1">Номер</div>
+            <div class="order-table-title table-column-2">Состав</div>
+            <div class="order-table-title table-column-3">Заказчик</div>
+            <div class="order-table-title table-column-4">Дата</div>
+            <div class="order-table-title table-column-5">Стоимость</div>
+          </div>
+
+          <div class="order-table-body">
+            <div class="order-table-string">
+              <div class="order-table-cells flex">
+                <div class="table-column-0">
+                  <div class="order-table-fav">
+                    <svg class="sprite">
+                      <use xlink:href="./images/svg/symbols.svg#fav"></use>
+                    </svg>
+                  </div>
+                </div>
+                <div class="table-column-1">
+                  <div class="order-table-num">126 285</div>
+                  <div class="order-table-date">12.12.2016, 22:15</div>
+                </div>
+                <div class="table-column-2">
+                  <div class="order-table-structure"><span class="underline">Трёхстворчатое окно + 2</span></div>
+                  <div class="order-table-type">Стандарт</div>
+                </div>
+                <div class="table-column-3">
+                  <div class="order-table-name">Васильев Константин</div>
+                  <div class="order-table-phone">+7 952 345-12-32</div>
+                </div>
+                <div class="table-column-4">
+                  <div class="order-table-term">31 мар. 2023</div>
+                </div>
+                <div class="table-column-5">
+                  <div class="order-table-total">34 000,00</div>
+                </div>
+                <div class="order-table-control">
+                  <button class="order-table-more">Детали</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="order-table-string">
+              <div class="order-table-cells flex">
+                <div class="table-column-0">
+                  <div class="order-table-fav">
+                    <svg class="sprite">
+                      <use xlink:href="./images/svg/symbols.svg#fav"></use>
+                    </svg>
+                  </div>
+                </div>
+                <div class="table-column-1">
+                  <div class="order-table-num">126 148</div>
+                  <div class="order-table-date">11.12.2016, 07:44</div>
+                </div>
+                <div class="table-column-2">
+                  <div class="order-table-structure"><span class="underline">Двухстворчатое окно </span></div>
+                  <div class="order-table-type">Премиум</div>
+                </div>
+                <div class="table-column-3">
+                  <div class="order-table-name">Приходько Владимир</div>
+                  <div class="order-table-phone">+7 495 220-08-36</div>
+                </div>
+                <div class="table-column-4">
+                  <div class="order-table-term">31 мар. 2023</div>
+                </div>
+                <div class="table-column-5">
+                  <div class="order-table-total">50 000,10</div>
+                </div>
+                <div class="order-table-control">
+                  <button class="order-table-more">Детали</button>
+                </div>
+              </div>
+
+              <div class="order-table-detail">
+                <div class="table-column-1">
+                  asdas
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="ui-pagination flex">
+        <div class="ui-pgn-btns">
+          <span class="ui-pgn-btn current">1</span>
+          <a href="#" class="ui-pgn-btn">2</a>
+          <a href="#" class="ui-pgn-btn">3</a>
+          <a href="#" class="ui-pgn-btn">4</a>
+          <a href="#" class="ui-pgn-arrow next">
+            <svg class="sprite ui-pgn-arrow-icon next">
+              <use xlink:href="./images/svg/symbols.svg#next"></use>
+            </svg>
+          </a>
+          <a href="#" class="ui-pgn-arrow last">
+            <svg class="sprite ui-pgn-arrow-icon last">
+              <use xlink:href="./images/svg/symbols.svg#last"></use>
+            </svg>
+          </a>
+        </div>
+
+        <div class="ui-pgn-more flex">
+          Показать по
+
+          <select class="ui-pgn-select">
+            <option value="12">12</option>
+            <option value="13">13</option>
+            <option value="14">14</option>
+            <option value="15">15</option>
+          </select>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--#include file="inc-footer.html"-->

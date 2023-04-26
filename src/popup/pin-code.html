@@ -17,6 +17,7 @@
           <input type="text" maxlength="1">
           <input type="text" maxlength="1" id="pin">
         </div>
+        <span class="pin-error hidden">Пожалуйста, заполните поля</span>
       </div>
 
       <div class="pin-code-link">Не получили SMS? <a href="#">Отправить повторно</a></div>
@@ -38,9 +39,11 @@
         let maxLength = parseInt(target.attributes["maxlength"].value, 10);
         let myLength = target.value.length;
 
-        arr.push(myLength)
+        if(arr.length !== 5) {
+          arr.push(myLength)
 
-        console.log(arr)
+          console.log(arr)
+        }
 
         if(myLength >= maxLength) {
           let next = target;
@@ -86,8 +89,13 @@
         // },
 
         submitHandler: function (form) {
-          if(arr.length === 6) {
+          const err = document.querySelector('.pin-error')
+
+          if(arr.length === 5) {
             showPopup('./popup/success.html')
+            err.classList.add('hidden')
+          } else {
+            err.classList.remove('hidden')
           }
         },
       });
