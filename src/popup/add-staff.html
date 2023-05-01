@@ -1,0 +1,165 @@
+<div class="ui-popup add-staff">
+  <div class="ui-popup-head">Добавить сотрудника</div>
+
+  <div class="ui-popup-body add-staff">
+    <form action="#" class="popup-form">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="ui-field">
+            <label class="ui-label" for="name">Имя <span>*</span></label>
+
+            <div class="ui-input-field">
+              <input type="text" name="name" id="name" class="ui-input" placeholder="Имя сотрудника">
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="ui-field">
+            <label class="ui-label" for="surname">Фамилия <span>*</span></label>
+
+            <div class="ui-input-field">
+              <input type="text" name="surname" id="surname" class="ui-input" placeholder="Фамилия сотрудника">
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="ui-field">
+            <label class="ui-label">Должность <span>*</span></label>
+
+            <div class="ui-input-wrp">
+              <label for="job" class="ui-label"></label>
+
+              <select name="job" id="job" class="ui-select" data-placeholder="Должность сотрудника">
+                <option value=""></option>
+                <option value="Мастер">Мастер</option>
+                <option value="Менеджер по продажам">Менеджер по продажам</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="ui-field">
+            <label class="ui-label" for="phone">Телефон <span>*</span></label>
+
+            <div class="ui-input-field">
+              <input type="text" name="phone" id="phone" class="ui-input" placeholder="Введите номер телефона">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="add-staff-file">
+        <div class="add-staff-title">Фото сотрудника</div>
+
+        <div class="image-container"></div>
+
+        <div class="add-staff-upload">
+          <label for="upload-photo" class="custom-upload">
+            <img src="../images/icon/upload-file.svg" alt="alt">
+            <span class="underline">Загрузить фотографию</span>
+            <input type="file" id="upload-photo" class="hidden-input" accept="image/jpeg, image/png">
+          </label>
+        </div>
+
+        <div class="add-staff-type">Формат файла: jpg, jpeg, png</div>
+      </div>
+
+      <button class="ui-btn">Добавить</button>
+    </form>
+  </div>
+
+  <script>
+    $( document ).ready(function() {
+      showPassword();
+      phoneValidate();
+      $('select.ui-select').styler();
+
+      $(".popup-form").validate({
+        errorElement: "span",
+
+        rules: {
+          name: {
+            required: true,
+            lettersonly: true
+          },
+
+          surname: {
+            required: true,
+            lettersonly: true
+          },
+
+          job: {
+            required: true,
+          },
+
+          phone: {
+            required: true,
+            phone: true,
+          },
+        },
+
+        messages: {
+          job: {
+            required: 'Пожалуйста, выберете должность'
+          },
+        },
+
+        errorPlacement: function (error, element) {
+          if (element.hasClass('ui-input')) {
+            element.closest('.ui-field').append(error);
+          }
+
+          if (element.hasClass('ui-select')) {
+            element.closest('.jq-selectbox').after(error);
+          }
+        },
+
+        submitHandler: function (form) {
+          showPopup('./popup/success-add.html')
+        },
+      });
+
+      const inputElement = document.getElementById("upload-photo");
+      const containerElement = document.querySelector(".image-container");
+
+      inputElement.addEventListener("change", (event) => {
+        const file = event.target.files[0];
+        const reader = new FileReader();
+
+         // Создание кнопки удаления
+        const deleteButton = document.createElement("button");
+
+        deleteButton.classList.add("delete-button");
+
+        deleteButton.addEventListener("click", () => {
+          containerElement.innerHTML = "";
+          inputElement.value = null; // сбрасываем значение input-элемента, чтобы дать возможность пользователю выбирать тот же файл ещё раз
+
+          containerElement.classList.remove('active')
+        });
+
+
+        reader.onload = (e) => {
+          const imgElement = document.createElement("img");
+          imgElement.src = e.target.result;
+
+          // Очистка блока перед добавлением нового элемента
+          while (containerElement.firstChild) {
+            containerElement.removeChild(containerElement.firstChild);
+          }
+
+          containerElement.classList.add('active')
+
+          containerElement.appendChild(imgElement);
+          containerElement.appendChild(deleteButton);
+        };
+
+        reader.onerror = (e) => {
+          console.log(`Ошибка чтения файла: ${e.target.error}`);
+        }
+
+        reader.readAsDataURL(file);
+      });
+    });
+  </script>
+</div>

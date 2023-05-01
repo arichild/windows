@@ -30,70 +30,50 @@
 
   <script>
     $( document ).ready(function() {
-      const pinContainer = document.querySelector(".ui-pin");
-      const arr = []
+      const inputs = document.querySelectorAll(".ui-pin input");
+      const values = []
 
-      pinContainer.addEventListener('keyup', function (event) {
-        let target = event.srcElement;
+      inputs.forEach((input, index) => {
+        input.addEventListener('input', () => {
+          const {value, maxLength} = input;
 
-        let maxLength = parseInt(target.attributes["maxlength"].value, 10);
-        let myLength = target.value.length;
-
-        if(arr.length !== 5) {
-          arr.push(myLength)
-
-          console.log(arr)
-        }
-
-        if(myLength >= maxLength) {
-          let next = target;
-
-          while(next = next.nextElementSibling) {
-            if (next == null) break;
-
-            if(next.tagName.toLowerCase() == "input") {
-              next.focus();
-              break;
-            }
+          if (value.length === 0 && index > 0) {
+            values.splice(index - 1, 1);
+            inputs[index - 1].focus();
+          } else if (index < inputs.length - 1 && value.length === maxLength) {
+            values[index] = value;
+            inputs[index + 1].focus();
+          } else {
+            values[index] = value;
           }
-        }
+        });
 
-        if(myLength === 0) {
-          let next = target;
+        input.addEventListener('keydown', (e) => {
+          const {value, maxLength} = input;
 
-          while(next = next.previousElementSibling) {
-            if(next == null) break;
-
-            if(next.tagName.toLowerCase() == "input") {
-              next.focus();
-              break;
-            }
+          if (e.key === 'Backspace' && value.length === 0 && index > 0) {
+            values.splice(index - 1, 1);
+            inputs[index - 1].focus();
+          } else if (e.key !== 'Backspace' && value.length === maxLength && index < inputs.length - 1) {
+            values[index] = value;
+            inputs[index + 1].focus();
+          } else {
+            values[index] = value;
           }
-        }
-      }, false);
-
-      pinContainer.addEventListener('keydown', function (event) {
-        let target = event.srcElement;
-
-        target.value = "";
-      }, false);
-
+        });
+      });
 
       $(".popup-form").validate({
         errorElement: "span",
 
-        // rule: {
-        //   pin: {
-        //     required: true
-        //   }
-        // },
-
         submitHandler: function (form) {
           const err = document.querySelector('.pin-error')
 
-          if(arr.length === 5) {
-            showPopup('./popup/success.html')
+          if(values.length === 6) {
+            const output = values.join('')
             err.classList.add('hidden')
+
+            showPopup('./popup/success.html')
           } else {
             err.classList.remove('hidden')
           }

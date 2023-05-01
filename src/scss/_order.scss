@@ -6,6 +6,54 @@
       width: 100%;
     }
 
+    &-caption {
+      font-weight: 400;
+      font-size: 18px;
+      color: #1D1D1D;
+
+      &.fs-16 {
+        font-weight: 500;
+        font-size: 16px;
+      }
+
+      &.fw-600 {
+        font-weight: 600;
+      }
+    }
+
+    &-square {
+      font-weight: 600;
+    }
+
+    &-info {
+      margin-bottom: 20px;
+    }
+
+    &-desc {
+      font-weight: 400;
+      font-size: 18px;
+      color: #1D1D1D;
+
+      &.fs-16 {
+        font-size: 16px;
+        font-weight: 400;
+      }
+    }
+
+    &-data {
+      margin-bottom: 48px;
+    }
+
+    &-tag {
+      margin-bottom: 32px;
+    }
+
+    .ui-tag {
+      font-size: 16px;
+      height: 30px;
+      line-height: 30px;
+    }
+
     &-more {
       background: #E7EFFB;
       border: 1px solid #A9B8CF;
@@ -13,19 +61,38 @@
       font-weight: 600;
       color: #1D1D1D;
       height: 48px;
-      max-width: 118px;
-      width: 100%;
+      padding: 0 28px;
       cursor: pointer;
       font-family: Gilroy;
       font-size: 16px;
+      margin-right: 20px;
+      display: inline-block;
+      line-height: 48px;
+
+      &:last-child {
+        margin-right: 0;
+      }
+
+      &.orange {
+        background: #EE8F00;
+        color: #fff;
+        border-color: #EE8F00;
+      }
 
       &:hover {
         background: #A9B8CF;
+        color: #fff;
       }
     }
 
     &-detail {
       padding-left: 68px;
+      padding-top: 36px;
+      display: none;
+
+      &.active {
+        display: block;
+      }
     }
 
     &-title {
@@ -33,6 +100,18 @@
       font-size: 16px;
       color: #1D1D1D;
       // text-align: center;
+
+      .ui-tooltip {
+        top: 3px;
+        left: 0;
+      }
+
+      span {
+        font-size: 12px;
+        position: relative;
+        top: -6px;
+        left: -4px;
+      }
     }
 
     &-head {
@@ -42,11 +121,10 @@
       padding-left: 68px;
     }
 
-    &-cells {
-      padding: 27px 0;
+    &-string {
+      font-size: 18px;
       border: 1px solid #E7EFFB;
       border-bottom: none;
-      align-items: center;
 
       &.active {
         border-color: #F2D3A4;
@@ -59,6 +137,35 @@
 
       &:last-child {
         border-bottom: 1px solid #E7EFFB;
+      }
+    }
+
+    &-item {
+      margin-bottom: 34px;
+
+      .services-color-set {
+        margin-left: 8px;
+        position: relative;
+        top: -5px;
+      }
+
+      .order-table-desc {
+        margin-bottom: 22px;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+
+    &-cells {
+      padding: 27px 0;
+      border-bottom: none;
+      align-items: center;
+
+      &.active {
+        border-bottom: 1px solid #E7EFFB;
+        background: #FAFCFF;
       }
     }
 
@@ -94,9 +201,7 @@
       color: #90A1BA;
     }
 
-    &-string {
-      font-size: 18px;
-    }
+
 
     &-num {
       font-weight: 500;
@@ -115,6 +220,26 @@
       font-weight: 500;
       color: #1D1D1D;
       margin-bottom: 15px;
+
+      &.active {
+        img {
+          transform: rotate(-180deg);
+        }
+      }
+
+      img {
+        position: relative;
+        left: 5px;
+        transition: transform .2s;
+      }
+
+      span {
+        cursor: pointer;
+
+        &:hover {
+          opacity: .8;
+        }
+      }
     }
 
     &-type {
@@ -195,32 +320,67 @@
   }
 }
 
-.table-column-0 {
+.table-order-column-0 {
   max-width: 68px;
   flex: 0 0 68px;
 }
 
-.table-column-1 {
+.table-order-column-1 {
   max-width: 204px;
   flex: 0 0 204px;
 }
 
-.table-column-2 {
+.table-order-column-2 {
   max-width: 348px;
   flex: 0 0 348px;
 }
 
-.table-column-3 {
+.table-order-column-3 {
   max-width: 266px;
   flex: 0 0 266px;
 }
 
-.table-column-4 {
+.table-order-column-4 {
   max-width: 153px;
   flex: 0 0 153px;
 }
 
-.table-column-5 {
+.table-order-column-5 {
   max-width: 178px;
   flex: 0 0 178px;
+}
+
+.table-order-column-0 {
+  max-width: 68px;
+  flex: 0 0 68px;
+}
+
+.table-application-column-0 {
+  max-width: 68px;
+  flex: 0 0 68px;
+}
+
+.table-application-column-1 {
+  max-width: 204px;
+  flex: 0 0 204px;
+}
+
+.table-application-column-2 {
+  max-width: 346px;
+  flex: 0 0 346px;
+}
+
+.table-application-column-3 {
+  max-width: 116px;
+  flex: 0 0 116px;
+}
+
+.table-application-column-4 {
+  max-width: 303px;
+  flex: 0 0 303px;
+}
+
+.table-application-column-5 {
+  max-width: 334px;
+  flex: 0 0 334px;
 }

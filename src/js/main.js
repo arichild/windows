@@ -247,7 +247,7 @@ const fav = document.querySelectorAll('.order-table-fav')
 if(fav !== undefined || fav.length) {
   fav.forEach(item => {
     item.addEventListener('click', () => {
-      const parent = item.closest('.order-table-cells')
+      const parent = item.closest('.order-table-string')
 
       parent.classList.toggle('active')
       item.classList.toggle('active')
@@ -257,16 +257,37 @@ if(fav !== undefined || fav.length) {
 
 const filterFav = document.querySelector('.order-fav input')
 
-filterFav.addEventListener('change', () => {
-  const orders = document.querySelectorAll('.order-table-cells')
+if(filterFav) {
+  filterFav.addEventListener('change', () => {
+    const orders = document.querySelectorAll('.order-table-string')
 
-
-
-  orders.forEach(item => {
-    if(!item.classList.contains('active') && filterFav.checked === true) {
-      item.style.display = 'none'
-    } else {
-      item.style.display = 'flex'
-    }
+    orders.forEach(item => {
+      if(!item.classList.contains('active') && filterFav.checked === true) {
+        item.style.display = 'none'
+      } else {
+        item.style.display = 'block'
+      }
+    })
   })
-})
+}
+
+const tableMoreDetail = document.querySelectorAll('.order-table-structure span')
+
+if(tableMoreDetail !== undefined || tableMoreDetail.length) {
+  tableMoreDetail.forEach(item => {
+    item.addEventListener('click', () => {
+      const parent = item.closest('.order-table-string')
+      const more = parent.querySelector('.order-table-detail')
+      const title = item.closest('.order-table-structure')
+
+      if(more) {
+        const cells = parent.querySelector('.order-table-cells')
+
+        more.classList.toggle('active')
+        item.classList.toggle('active')
+        cells.classList.toggle('active')
+        title.classList.toggle('active')
+      }
+    })
+  })
+}

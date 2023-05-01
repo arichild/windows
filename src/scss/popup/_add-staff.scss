@@ -1,0 +1,90 @@
+.add-staff {
+  .ui-btn {
+    max-width: 152px;
+    width: 100%;
+  }
+
+  &-file {
+    margin-bottom: 24px;
+  }
+
+  &-upload {
+    margin-bottom: 15px;
+  }
+
+  &-title {
+    font-weight: 500;
+    font-size: 14px;
+    color: #1D1D1D;
+    margin-bottom: 22px;
+  }
+
+  &-type {
+    font-weight: 400;
+    font-size: 14px;
+    color: #90A1BA;
+  }
+}
+
+.custom-upload {
+  cursor: pointer;
+  position: relative;
+
+  span {
+    margin-left: 30px;
+  }
+
+  img {
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+}
+
+.hidden-input {
+  display: none;
+}
+
+.image-container {
+  width: 100px;
+  position: relative;
+  margin-bottom: 15px;
+  display: none;
+
+  &.active {
+    display: block;
+  }
+
+  button {
+    position: absolute;
+    right: -27px;
+    top: 0;
+    background-color: #D45656;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    padding: 0;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    text-align: center;
+
+    &::before {
+      content: '';
+      background-image: url('../../images/icon/delete-upl.svg');
+      background-repeat: no-repeat;
+      background-size: 8px;
+      width: 8px;
+      height: 8px;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+
+  img {
+    width: 100px;
+    height: 100px;
+  }
+}

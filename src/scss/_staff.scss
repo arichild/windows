@@ -1,0 +1,140 @@
+.staff {
+  &-person {
+    border: 1px solid #DCE5EF;
+    padding: 30px;
+    margin-bottom: 20px;
+    font-size: 18px;
+    color: #1D1D1D;
+    align-items: center;
+  }
+
+  &-img {
+    position: relative;
+    width: 65px;
+    height: 65px;
+    flex: 0 0 65px;
+    overflow: hidden;
+    border-radius: 50%;
+    margin-right: 30px;
+
+    img {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+      min-width: 100%;
+      min-height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &-info {
+    flex: 0 0 calc(100% - 119px);
+    max-width: calc(100% - 119px);
+    width: 100%;
+  }
+
+  &-name {
+    max-width: 310px;
+    flex: 0 0 310px;
+    width: 100%;
+  }
+
+  &-specialization {
+    max-width: 243px;
+    flex: 0 0 243px;
+    width: 100%;
+  }
+
+  &-phone {
+    max-width: 172px;
+    flex: 0 0 172px;
+    width: 100%;
+  }
+
+  &-edit {
+    height: 24px;
+    width: 24px;
+
+    svg {
+      fill: #A9B8CF;
+    }
+  }
+
+  &-header {
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 45px;
+
+    &-name {
+      font-weight: 600;
+      font-size: 36px;
+      color: #1D1D1D;
+    }
+
+    &-link {
+      padding-left: 34px;
+      position: relative;
+
+      &::before {
+        content: '';
+        background-image: url('../images/icon/staff-back.svg');
+        background-repeat: no-repeat;
+        background-size: 23px 9px;
+        width: 23px;
+        height: 9px;
+        position: absolute;
+        left: 0;
+        top: 6px;
+      }
+    }
+  }
+
+  &-block {
+    margin-bottom: 87px;
+  }
+
+  &-order {
+    &-title {
+      font-weight: 600;
+      font-size: 36px;
+      color: #1D1D1D;
+      margin-bottom: 45px;
+    }
+  }
+
+
+  &-data {
+    &-info {
+      max-width: calc(100% - 164px);
+      flex: 0 0 calc(100% - 164px);
+      width: 100%;
+      padding-top: 12px;
+    }
+
+
+
+    &-img {
+      margin-right: 30px;
+      max-width: 164px;
+      flex: 0 0 164px;
+      line-height: 0;
+    }
+
+    &-label {
+      font-weight: 500;
+    }
+
+    &-row {
+      margin-bottom: 24px;
+      font-size: 18px;
+      color: #1D1D1D;
+    }
+
+    &-label {
+      max-width: 195px;
+      width: 100%;
+      flex: 0 0 195px;
+    }
+  }
+}

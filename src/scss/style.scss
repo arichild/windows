@@ -22,6 +22,7 @@
 @import "contacts";
 @import "services";
 @import "order";
+@import "staff";
 
 // popup
 @import "./popup/sign-in.scss";
@@ -30,6 +31,7 @@
 @import "./popup/reviews-answer.scss";
 @import "./popup/filter.scss";
 @import "./popup/pin-code.scss";
+@import "./popup/add-staff.scss";
 
 
 * {

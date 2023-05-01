@@ -136,6 +136,18 @@
       display: inline-block;
       margin-right: 48px;
 
+      &.large {
+        font-size: 24px;
+        font-weight: 600;
+
+        span {
+          font-size: 14px;
+          font-weight: 400;
+          position: relative;
+          top: -14px;
+        }
+      }
+
       &:last-child {
         margin-right: 0;
       }
@@ -147,6 +159,68 @@
 
     .ui-btn {
       padding: 0 21px;
+    }
+  }
+
+  &-acc {
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &-right {
+    align-items: center;
+  }
+
+  &-notifications {
+    padding-right: 22px;
+    margin-right: 22px;
+    text-align: center;
+    position: relative;
+    cursor: pointer;
+
+    &-img {
+      width: 52px;
+      height: 52px;
+      border-radius: 50%;
+      border: 1px solid #E7EFFB;
+      line-height: 60px;
+    }
+
+    &::after {
+      content: "";
+      width: 1px;
+      height: 32px;
+      background: #e7effb;
+      position: absolute;
+      right: 0;
+      top: 50%;
+      transform: translate(0, -50%);
+    }
+  }
+
+  &-user {
+    &-img {
+      position: relative;
+      width: 52px;
+      height: 52px;
+      overflow: hidden;
+      border-radius: 50%;
+      margin-right: 12px;
+
+      img {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        min-width: 100%;
+        min-height: 100%;
+        object-fit: cover;
+      }
+    }
+
+    &-more {
+      position: relative;
+      top: 14px;
     }
   }
 }
