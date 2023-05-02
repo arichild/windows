@@ -855,18 +855,19 @@ svg.sprite {
 }
 
 .dotted {
+  display: flex;
+  align-items: center;
+
   &::after {
     content: "";
-    width: 100%;
+    flex-grow: 1;
     height: 1px;
-    display: inline-block;
-    position: relative;
-    top: -4px;
+    margin-right: 10px;
+    margin-left: 10px;
     background-image: url(../images/icon/dotted.png);
-    background-position: 0 100%;
     background-size: 4px;
+    background-position: left bottom;
     background-repeat: repeat-x;
-    padding-bottom: 4px;
   }
 }
 

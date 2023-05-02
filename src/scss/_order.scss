@@ -4,6 +4,38 @@
 
     &-control {
       width: 100%;
+      font-size: 0;
+    }
+
+    &-sum {
+      max-width: 158px;
+      width: 100%;
+      text-align: center;
+      margin-right: 20px;
+      font-weight: 600;
+      height: 48px;
+      line-height: 48px;
+      font-size: 18px;
+      color: #1D1D1D;
+
+      span {
+        position: relative;
+        padding-right: 32px;
+
+        &::after {
+          content: "";
+          background-image: url(../images/icon/edit-staff.svg);
+          background-repeat: no-repeat;
+          background-size: 20px;
+          width: 20px;
+          height: 20px;
+          position: absolute;
+          right: 0;
+          right: 0;
+          top: 50%;
+          transform: translate(0, -50%);
+        }
+      }
     }
 
     &-caption {
@@ -61,13 +93,19 @@
       font-weight: 600;
       color: #1D1D1D;
       height: 48px;
-      padding: 0 28px;
+      // padding: 0 28px;
       cursor: pointer;
       font-family: Gilroy;
       font-size: 16px;
       margin-right: 20px;
       display: inline-block;
       line-height: 48px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      max-width: 118px;
+      width: 100%;
+      text-align: center;
 
       &:last-child {
         margin-right: 0;
@@ -77,11 +115,14 @@
         background: #EE8F00;
         color: #fff;
         border-color: #EE8F00;
+        max-width: 158px;
+        width: 100%;
       }
 
       &:hover {
         background: #A9B8CF;
         color: #fff;
+        border-color: #A9B8CF;
       }
     }
 

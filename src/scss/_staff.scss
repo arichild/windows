@@ -76,16 +76,18 @@
       padding-left: 34px;
       position: relative;
 
-      &::before {
-        content: '';
-        background-image: url('../images/icon/staff-back.svg');
-        background-repeat: no-repeat;
-        background-size: 23px 9px;
-        width: 23px;
-        height: 9px;
-        position: absolute;
-        left: 0;
-        top: 6px;
+      a {
+        &::before {
+          content: '';
+          background-image: url('../images/icon/staff-back.svg');
+          background-repeat: no-repeat;
+          background-size: 23px 9px;
+          width: 23px;
+          height: 9px;
+          position: absolute;
+          left: 0;
+          top: 6px;
+        }
       }
     }
   }
@@ -112,7 +114,52 @@
       padding-top: 12px;
     }
 
+    &-actions {
+      .edit {
+        padding-left: 23px;
+        margin-right: 30px;
+        position: relative;
 
+        span {
+          border-bottom: 1px solid #A9B8CF;
+        }
+
+        &::before {
+          content: '';
+          background-image: url('../images/icon/edit-staff.svg');
+          background-repeat: no-repeat;
+          background-size: 20px;
+          width: 20px;
+          height: 20px;
+          position: absolute;
+          left: 0;
+          top: 0;
+        }
+      }
+
+      .delete {
+        padding-left: 23px;
+        margin-right: 30px;
+        position: relative;
+        color: #D45656;
+
+        span {
+          border-bottom: 1px solid #D45656;
+        }
+
+        &::before {
+          content: '';
+          background-image: url('../images/icon/delete-icon.svg');
+          background-repeat: no-repeat;
+          background-size: 20px;
+          width: 20px;
+          height: 20px;
+          position: absolute;
+          left: 0;
+          top: 0;
+        }
+      }
+    }
 
     &-img {
       margin-right: 30px;
